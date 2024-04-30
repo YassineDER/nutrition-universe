@@ -1,0 +1,334 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,700);
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+
+.containerbmi {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    background: url(/imgs/BMI/bgbmi.jpg) no-repeat center;
+    overflow: hidden;
+    background-size: cover;
+    border-radius: 2px;
+    padding: 1.125rem
+}
+
+.rowbim {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-left: 30px
+}
+
+    .rowbim span {
+        font-weight: 500
+    }
+
+.colbmi {
+    flex: 1;
+    padding: 1em;
+    width: 50%
+}
+
+.displaybmi {
+    box-shadow: 0 0 20px rgba(0,139,253,.25);
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 3px
+}
+
+input[type="range"] {
+    width: 75%;
+    height: 3.5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #dcdcdc;
+    border-radius: 3px;
+    outline: none
+}
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 15px;
+        width: 15px;
+        background-color: #1c1c1c;
+        border-radius: 50%;
+        cursor: pointer
+    }
+
+#resultbmi {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #44b029;
+    margin: 10px
+}
+
+#categorybmi {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 800
+}
+
+.bmi-gage-container {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    position: relative;
+    width: 100%;
+    right: 0;
+    top: 0
+}
+
+.bmi-gage-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/imgs/BMI/BMI-king.png) no-repeat center;
+    overflow: hidden;
+    background-size: contain
+}
+
+.arrow-calculator {
+    position: absolute;
+    bottom: -10px;
+    right: 27%;
+    background: 0 0;
+    width: 60%;
+    transform: rotate(52deg);
+    -webkit-transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out
+}
+
+.bmi-result-container {
+    position: relative;
+    top: 600px;
+    text-align: center
+}
+
+#control-bmi-result-display-bmi {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: -17px
+}
+
+#control-bmi-result-display {
+    font-size: 50px;
+    font-weight: 900
+}
+
+.arrow-calculator, .a-img-txt img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border-radius: 3px
+}
+
+.a-img-txt {
+    display: grid
+}
+
+    .a-img-txt > * {
+        grid-area: 1/1/-1/-1
+    }
+
+.a-img {
+    filter: invert(0)
+}
+
+.a-txt {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    filter: invert(0);
+    transition: opacity .8s
+}
+
+.a-txt-title1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 1;
+    filter: invert(0);
+    transition: opacity .8s
+}
+
+.c1 {
+    background: #3fb2f5cc
+}
+
+.c2 {
+    background: #44b029cc
+}
+
+.c3 {
+    background: #feb30ccc
+}
+
+.c4 {
+    background: #ff3f32cc
+}
+
+.a-txt:hover {
+    opacity: 1
+}
+
+.a-img-txt:hover .a-img {
+    filter: invert(0)
+}
+
+.bmi-right {
+    text-align: right;
+    font-size: 18px
+}
+
+.bmi-text-mobi {
+    display: none
+}
+
+.blink-bgbmi {
+    animation: blinkingBackground1 2s infinite
+}
+
+@keyframes blinkingBackground1 {
+    0% {
+        background-color: #b9d9ec
+    }
+
+    25% {
+        background-color: #3fb2f5
+    }
+
+    50% {
+        background-color: #b9d9ec
+    }
+
+    75% {
+        background-color: #3fb2f5
+    }
+
+    100% {
+        background-color: #b9d9ec
+    }
+}
+
+.blink-bgbmi {
+    animation: blinkingBackground2 2s infinite
+}
+
+@keyframes blinkingBackground2 {
+    0% {
+        background-color: #abdb92
+    }
+
+    25% {
+        background-color: #44b029
+    }
+
+    50% {
+        background-color: #abdb92
+    }
+
+    75% {
+        background-color: #44b029
+    }
+
+    100% {
+        background-color: #abdb92
+    }
+}
+
+.blink-bgbmi {
+    animation: blinkingBackground3 2s infinite
+}
+
+@keyframes blinkingBackground3 {
+    0% {
+        background-color: #f9e08e
+    }
+
+    25% {
+        background-color: #feb30c
+    }
+
+    50% {
+        background-color: #f9e08e
+    }
+
+    75% {
+        background-color: #feb30c
+    }
+
+    100% {
+        background-color: #f9e08e
+    }
+}
+
+.blink-bgbmi {
+    animation: blinkingBackground4 2s infinite
+}
+
+@keyframes blinkingBackground4 {
+    0% {
+        background-color: #ef907c
+    }
+
+    25% {
+        background-color: #ff3f32
+    }
+
+    50% {
+        background-color: #ef907c
+    }
+
+    75% {
+        background-color: #ff3f32
+    }
+
+    100% {
+        background-color: #ef907c
+    }
+}
+
+@media (max-width:767px) {
+    .titlebmi h1 {
+        font-size: 16px;
+        height: 52px
+    }
+
+    .containerbmi {
+        display: block
+    }
+
+    .colbmi {
+        flex: 1;
+        padding: 0;
+        width: 100%
+    }
+
+    .rowbim {
+        margin-bottom: 10px
+    }
+
+    .bmi-text {
+        display: none
+    }
+
+    .bmi-text-mobi {
+        display: block
+    }
+}
+

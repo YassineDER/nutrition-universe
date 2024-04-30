@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#"  AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="NutritionUniverse.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Portail Admin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/templatemo-style.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl">
+            <div class="container h-100">
+                <a class="navbar-brand" href="Acceuil.aspx">
+                        <img src="imgs/logo/logo-removebg-preview.png" height="95" width="169" alt="NU Logo" loading="lazy" />
+                    </a>
+                <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars tm-nav-icon"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto h-100">
+                        <li class="nav-item">
+                            <a class="nav-link active" runat="server" id="DashbordBtn" href="Dashbord.aspx">
+                                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                                Dashboard
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" id="ProductsBtn" href="Produits.aspx">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                Produits
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" id="UsersBtn" href="Comptes.aspx">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                Comptes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Authentification.aspx">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                Se deconnecter
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+        </nav>
+
+
+    <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+
+    <%--<script src="js/jquery-3.3.1.min.js"></script>--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js"></script>
+    <script src="boostrap/js/bootstrap.bundle.js"></script>
+    <script src="js/tooplate-scripts.js"></script>
+
+    <script>
+        let ctxLine,
+            ctxBar,
+            ctxPie,
+            optionsLine,
+            optionsBar,
+            optionsPie,
+            configLine,
+            configBar,
+            configPie,
+            lineChart,
+            barChart,
+            pieChart;
+        // DOM is ready
+        $(function () {
+            drawLineChart(); // Line Chart
+            drawBarChart(); // Bar Chart
+            drawPieChart(); // Pie Chart
+
+            $(window).resize(function () {
+                updateLineChart();
+                updateBarChart();
+            });
+        })
+    </script>
+
+</body>
+</html>

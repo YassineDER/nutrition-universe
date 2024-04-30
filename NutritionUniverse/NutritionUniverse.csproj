@@ -1,0 +1,502 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F41693C-A03E-4E6E-9C25-2F24C706AA74}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NutritionUniverse</RootNamespace>
+    <AssemblyName>NutritionUniverse</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44358</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjoutCat.aspx" />
+    <Content Include="AjoutProduit.aspx" />
+    <Content Include="boostrap\BMI.js" />
+    <Content Include="boostrap\css\style.css" />
+    <Content Include="boostrap\BMI.css" />
+    <Content Include="boostrap\js\jsCart\bootstrap.min.js" />
+    <Content Include="boostrap\js\jsCart\jquery.min.js" />
+    <Content Include="boostrap\js\jsCart\main.js" />
+    <Content Include="boostrap\js\jsCart\popper.js" />
+    <Content Include="boostrap\scroll.css" />
+    <Content Include="boostrap\stylePanier.css" />
+    <Content Include="Comptes.aspx" />
+    <Content Include="Confirmation.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\fontawesome.min.css" />
+    <Content Include="css\templatemo-style.css" />
+    <Content Include="Dashbord.aspx" />
+    <Content Include="imgs\BMI\arrow-calculator.gif" />
+    <Content Include="imgs\BMI\bgbmi.jpg" />
+    <Content Include="imgs\BMI\BMI-king.png" />
+    <Content Include="imgs\BMI\obesite.jpg" />
+    <Content Include="imgs\BMI\poids-insuffisant.jpg" />
+    <Content Include="imgs\BMI\poids-normal.jpg" />
+    <Content Include="imgs\BMI\surpoids.jpg" />
+    <Content Include="imgs\Cat\accessoires-icon.png" />
+    <Content Include="imgs\Cat\barres-snacks.png" />
+    <Content Include="imgs\Cat\Creatine-icon.png" />
+    <Content Include="imgs\Cat\Gainer-icon.png" />
+    <Content Include="imgs\Cat\Proteine-icon.png" />
+    <Content Include="imgs\Cat\vegan-icon.png" />
+    <Content Include="imgs\Cat\vitamines-icon.png" />
+    <Content Include="imgs\icons8-ajouter-30.png" />
+    <Content Include="imgs\icons8-confirm-30.png" />
+    <Content Include="imgs\icons8-effacer-15.png" />
+    <Content Include="imgs\icons8-flèche-gauche-30.png" />
+    <Content Include="imgs\icons8-modifier-14.png" />
+    <Content Include="imgs\logo\12iul_el__360x540.jpg" />
+    <Content Include="imgs\logo\4321146_360x540.jpg" />
+    <Content Include="imgs\logo\6999298.jpg" />
+    <Content Include="imgs\logo\male-athlete-bodybuilder_116317-3676.jpg" />
+    <Content Include="imgs\slide3.jpg" />
+    <Content Include="imgs\slide4.jpg" />
+    <Content Include="img\arrow-down.png" />
+    <Content Include="img\avatar.png" />
+    <Content Include="img\check-mark.png" />
+    <Content Include="img\notification-01.jpg" />
+    <Content Include="img\notification-02.jpg" />
+    <Content Include="img\notification-03.jpg" />
+    <Content Include="img\product-image.jpg" />
+    <Content Include="Inscription.aspx" />
+    <Content Include="jquery-ui-datepicker\AUTHORS.txt" />
+    <Content Include="jquery-ui-datepicker\external\jquery\jquery.js" />
+    <Content Include="jquery-ui-datepicker\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="jquery-ui-datepicker\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="jquery-ui-datepicker\index.html" />
+    <Content Include="jquery-ui-datepicker\jquery-ui.css" />
+    <Content Include="jquery-ui-datepicker\jquery-ui.js" />
+    <Content Include="jquery-ui-datepicker\jquery-ui.min.css" />
+    <Content Include="jquery-ui-datepicker\jquery-ui.min.js" />
+    <Content Include="jquery-ui-datepicker\jquery-ui.structure.css" />
+    <Content Include="jquery-ui-datepicker\jquery-ui.structure.min.css" />
+    <Content Include="jquery-ui-datepicker\jquery-ui.theme.css" />
+    <Content Include="jquery-ui-datepicker\jquery-ui.theme.min.css" />
+    <Content Include="jquery-ui-datepicker\LICENSE.txt" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Chart.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\moment.min.js" />
+    <Content Include="js\tooplate-scripts.js" />
+    <Content Include="Panier.aspx" />
+    <Content Include="Produits.aspx" />
+    <Content Include="P_AccessoiresExercice.aspx" />
+    <Content Include="Acceuil.aspx" />
+    <Content Include="Authentification.aspx" />
+    <Content Include="P_BCAA_AcidesAmines.aspx" />
+    <Content Include="boostrap\css\bootstrap-grid.css" />
+    <Content Include="boostrap\css\bootstrap-grid.min.css" />
+    <Content Include="boostrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="boostrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="boostrap\css\bootstrap-reboot.css" />
+    <Content Include="boostrap\css\bootstrap-reboot.min.css" />
+    <Content Include="boostrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="boostrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="boostrap\css\bootstrap-utilities.css" />
+    <Content Include="boostrap\css\bootstrap-utilities.min.css" />
+    <Content Include="boostrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="boostrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="boostrap\css\bootstrap.css" />
+    <Content Include="boostrap\css\bootstrap.min.css" />
+    <Content Include="boostrap\css\bootstrap.rtl.css" />
+    <Content Include="boostrap\css\bootstrap.rtl.min.css" />
+    <Content Include="boostrap\errorStyle.css" />
+    <Content Include="boostrap\jquery.min.js" />
+    <Content Include="boostrap\js\bootstrap.bundle.js" />
+    <Content Include="boostrap\js\bootstrap.bundle.min.js" />
+    <Content Include="boostrap\js\bootstrap.esm.js" />
+    <Content Include="boostrap\js\bootstrap.esm.min.js" />
+    <Content Include="boostrap\js\bootstrap.js" />
+    <Content Include="boostrap\js\bootstrap.min.js" />
+    <Content Include="boostrap\main.js" />
+    <Content Include="boostrap\popper.js" />
+    <Content Include="boostrap\script.js" />
+    <Content Include="boostrap\style.css" />
+    <Content Include="boostrap\styleComnts.css" />
+    <Content Include="boostrap\styleLogin.css" />
+    <Content Include="P_BruleurDeGraisse.aspx" />
+    <Content Include="CommanderProduit.aspx" />
+    <Content Include="P_Creatine.aspx" />
+    <Content Include="P_EnergieEndurance.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="P_Gainers.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="imgs\BG\bg.jpg" />
+    <Content Include="imgs\BG\videoplayback %281%29.mp4" />
+    <Content Include="imgs\icons8-bonne-qualité.gif" />
+    <Content Include="imgs\icons8-boîte.gif" />
+    <Content Include="imgs\icons8-compte-vérifié-64.png" />
+    <Content Include="imgs\icons8-en-transit.gif" />
+    <Content Include="imgs\icons8-garantie.gif" />
+    <Content Include="imgs\icons8-soumettre-pour-approbation-48.png" />
+    <Content Include="imgs\icons8-star-18.png" />
+    <Content Include="imgs\icons8-visible-48.png" />
+    <Content Include="imgs\slide2.jpg" />
+    <Content Include="imgs\Slide1.jpg" />
+    <Content Include="imgs\dumbell.png" />
+    <Content Include="imgs\fitness.png" />
+    <Content Include="imgs\icons8-accueil-24.png" />
+    <Content Include="imgs\icons8-catalog-30.png" />
+    <Content Include="imgs\icons8-courrier-24.png" />
+    <Content Include="imgs\icons8-facebook-30.png" />
+    <Content Include="imgs\icons8-impression-25.png" />
+    <Content Include="imgs\icons8-info-30.png" />
+    <Content Include="imgs\icons8-instagram-30.png" />
+    <Content Include="imgs\icons8-lien-30.png" />
+    <Content Include="imgs\icons8-linkedin-30.png" />
+    <Content Include="imgs\icons8-twitter-30.png" />
+    <Content Include="imgs\icons8-téléphone-25.png" />
+    <Content Include="imgs\icons8-user-64.png" />
+    <Content Include="imgs\icons8-whatsapp-30.png" />
+    <Content Include="imgs\icons8-panier-chargé-60.png" />
+    <Content Include="imgs\logo\logo-removebg-preview.png" />
+    <Content Include="imgs\logo\logo.jpg" />
+    <Content Include="imgs\logo\logo.png" />
+    <Content Include="imgs\logo\Read me before using your logo.txt" />
+    <Content Include="imgs\muscle.png" />
+    <Content Include="imgs\supplement.png" />
+    <Content Include="P_Proteine.aspx" />
+    <Content Include="P_SnacksBoissons.aspx" />
+    <Content Include="P_VitaminesMineraux.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjoutCat.aspx.cs">
+      <DependentUpon>AjoutCat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjoutCat.aspx.designer.cs">
+      <DependentUpon>AjoutCat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutProduit.aspx.cs">
+      <DependentUpon>AjoutProduit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjoutProduit.aspx.designer.cs">
+      <DependentUpon>AjoutProduit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comptes.aspx.cs">
+      <DependentUpon>Comptes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comptes.aspx.designer.cs">
+      <DependentUpon>Comptes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord.aspx.cs">
+      <DependentUpon>Dashbord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord.aspx.designer.cs">
+      <DependentUpon>Dashbord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inscription.aspx.cs">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inscription.aspx.designer.cs">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Panier.aspx.cs">
+      <DependentUpon>Panier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panier.aspx.designer.cs">
+      <DependentUpon>Panier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Produits.aspx.cs">
+      <DependentUpon>Produits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Produits.aspx.designer.cs">
+      <DependentUpon>Produits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P_AccessoiresExercice.aspx.cs">
+      <DependentUpon>P_AccessoiresExercice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_AccessoiresExercice.aspx.designer.cs">
+      <DependentUpon>P_AccessoiresExercice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Acceuil.aspx.cs">
+      <DependentUpon>Acceuil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acceuil.aspx.designer.cs">
+      <DependentUpon>Acceuil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Authentification.aspx.cs">
+      <DependentUpon>Authentification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Authentification.aspx.designer.cs">
+      <DependentUpon>Authentification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P_BCAA_AcidesAmines.aspx.cs">
+      <DependentUpon>P_BCAA_AcidesAmines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_BCAA_AcidesAmines.aspx.designer.cs">
+      <DependentUpon>P_BCAA_AcidesAmines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P_BruleurDeGraisse.aspx.cs">
+      <DependentUpon>P_BruleurDeGraisse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_BruleurDeGraisse.aspx.designer.cs">
+      <DependentUpon>P_BruleurDeGraisse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommanderProduit.aspx.cs">
+      <DependentUpon>CommanderProduit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommanderProduit.aspx.designer.cs">
+      <DependentUpon>CommanderProduit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P_Creatine.aspx.cs">
+      <DependentUpon>P_Creatine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_Creatine.aspx.designer.cs">
+      <DependentUpon>P_Creatine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P_EnergieEndurance.aspx.cs">
+      <DependentUpon>P_EnergieEndurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_EnergieEndurance.aspx.designer.cs">
+      <DependentUpon>P_EnergieEndurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P_Gainers.aspx.cs">
+      <DependentUpon>P_Gainers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_Gainers.aspx.designer.cs">
+      <DependentUpon>P_Gainers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="P_Proteine.aspx.cs">
+      <DependentUpon>P_Proteine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_Proteine.aspx.designer.cs">
+      <DependentUpon>P_Proteine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles.cs" />
+    <Compile Include="P_SnacksBoissons.aspx.cs">
+      <DependentUpon>P_SnacksBoissons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_SnacksBoissons.aspx.designer.cs">
+      <DependentUpon>P_SnacksBoissons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P_VitaminesMineraux.aspx.cs">
+      <DependentUpon>P_VitaminesMineraux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P_VitaminesMineraux.aspx.designer.cs">
+      <DependentUpon>P_VitaminesMineraux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <Content Include="boostrap\css\bootstrap-grid.css.map" />
+    <Content Include="boostrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="boostrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="boostrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="boostrap\css\bootstrap-reboot.css.map" />
+    <Content Include="boostrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="boostrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="boostrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="boostrap\css\bootstrap-utilities.css.map" />
+    <Content Include="boostrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="boostrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="boostrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="boostrap\css\bootstrap.css.map" />
+    <Content Include="boostrap\css\bootstrap.min.css.map" />
+    <Content Include="boostrap\css\bootstrap.rtl.css.map" />
+    <Content Include="boostrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="boostrap\js\bootstrap.bundle.js.map" />
+    <Content Include="boostrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="boostrap\js\bootstrap.esm.js.map" />
+    <Content Include="boostrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="boostrap\js\bootstrap.js.map" />
+    <Content Include="boostrap\js\bootstrap.min.js.map" />
+    <Content Include="boostrap\fonts\Achtung! Polizei.otf" />
+    <Content Include="jquery-ui-datepicker\package.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Admin.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TemporaryImages\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51423</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44358/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>https://localhost:44358/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

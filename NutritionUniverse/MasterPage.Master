@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="NutritionUniverse.MasterPage" %>
+
+<!DOCTYPE html><html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>Nutrition Universe - Home of Bodybuilding Nutrition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="boostrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="boostrap/style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <header>
+        <marquee behavior="scroll" scrollamount="15" direction="left" class="fs-5"> &#128165;  Livraison gratuite à partir de 300 Dhs ! &#128293; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ✅ Remboursement sous 30 jours ✅
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  🎁 Caddeau offert pour une durée limitée 🎁
+        </marquee><nav class="navbar navbar-expand-lg bg-gradient">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <a class="navbar-brand" href="Acceuil.aspx">
+                        <img src="imgs/logo/logo-removebg-preview.png" height="95" width="169" alt="NU Logo" loading="lazy" />
+                    </a>
+                </div>
+
+                <div class="input-group  w-50 me-5 pe-5" >
+                    <input type="text" class="fs-5 form-control border-warning border-2 " placeholder="Cherchez un produit, une marque..." aria-label="Cherchez un produit, une marque..." aria-describedby="btnRechercher" />
+                    <button class="btn btn-warning" type="button" id="btnRechercher">
+                        <i class="fa fa-search fs-5" aria-hidden="true"></i>
+                    </button>
+                    
+                </div>
+
+                <ul class="navbar-nav ms-5 ps-5">
+                    <li class="nav-item ms-5">
+                        <a class="mx-2 position-relative" id="btnPanier" runat="server" href="Panier.aspx">
+                            <img src="imgs/icons8-panier-chargé-60.png" class="my-2" id="panier" height="40"/>
+                            <asp:Label runat="server" id="nbrItemsPanier" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" Text="" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="mx-3" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" href="#">
+                            <img src="imgs/icons8-user-64.png" class="rounded-circle my-2" height="40" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <div class="container-fluid ms-5">
+                <div class="collapse navbar-collapse ps-5 ms-5" id="main_nav">
+                    <ul class="navbar-nav" id="custumFont">
+                        <img src="imgs/fitness.png" height="31" class="mt-2 pl-2" />
+                        <li class="nav-item dropdown" >
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">PERTE DE POIDS</a>
+                            <ul class="dropdown-menu fade-up">
+                                <li><a class="dropdown-item" href="P_BruleurDeGraisse.aspx">Brulleurs de graisse</a></li>
+                                <li><a class="dropdown-item" href="P_Proteine.aspx">Proteine</a></li>
+                                <li><a class="dropdown-item" href="P_BCAA_AcidesAmines.aspx">BCAA's & Acides aminés</a></li>
+                            </ul>
+                        </li>
+                        <img src="imgs/muscle.png" height="31" class="mt-2 pl-2" />
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">PRISE DE MASSE</a>
+                            <ul class="dropdown-menu fade-up">
+                                <li><a class="dropdown-item" href="P_Gainers.aspx">Gainers</a></li>
+                                <li><a class="dropdown-item" href="P_Creatine.aspx">Creatine</a></li>
+                                <li><a class="dropdown-item" href="P_Proteine.aspx">Proteine</a></li>
+                            </ul>
+                        </li>
+                        <img src="imgs/supplement.png" height="31" class="mt-2 pl-2" />
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">VITAMINES & BIEN ÊTRE</a>
+                            <ul class="dropdown-menu fade-up">
+                                <li><a class="dropdown-item" href="P_SnacksBoissons.aspx">Snacks & Boissons</a></li>
+                                <li><a class="dropdown-item" href="P_EnergieEndurance.aspx">Energie & Endurance</a></li>
+                                <li><a class="dropdown-item" href="P_VitaminesMineraux.aspx">Vitamines & Minéraux</a></li>
+                            </ul>
+                        </li>
+                        <img src="imgs/dumbell.png" height="31" class="mt-2 pl-2" />
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">VÊTEMENTS & ACCESSOIRES</a>
+                            <ul class="dropdown-menu fade-up">
+                                <li><a class="dropdown-item" href="P_AccessoiresExercice.aspx">Accessoires d'exercice</a></li>
+                                <li><a class="dropdown-item" href="P_Vetements.aspx">Vetements</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>        
+        
+    </header>
+    
+
+
+    <form id="form1" runat="server">
+
+        <!-- canvas Right -->
+        <div class="w-25 offcanvas offcanvas-end" style="opacity:80%;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <asp:Image ImageUrl="~/imgs/logo/logo.png" height="140" width="220" runat="server" />
+                
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <h5>
+                <asp:Label ID="LabelUsername" runat="server" CssClass="mx-4 text-black" Text=" "></asp:Label></h5>
+            <br />
+            <div class="list-group">
+                <asp:Button UseSubmitBehavior="false" OnClick="btnSignUP_Click" runat="server" ID="btnSignUP" Text="S'inscrire" Visible="false" CssClass="list-group-item list-group-item-action fs-4" />
+                <asp:LoginStatus ID="LoginStatus1"  runat="server" CssClass="list-group-item list-group-item-action fs-4" LoginText="Se connecter" LogoutAction="RedirectToLoginPage" LogoutPageUrl="~/Authentification.aspx" LogoutText="Se déconnecter" />
+                <asp:Button UseSubmitBehavior="false" runat="server" ID="btnHist" Text="Historique des commandes" Visible="false" CssClass="list-group-item list-group-item-action fs-5" />
+                <asp:LoginView ID="LoginView1" runat="server"></asp:LoginView>
+            </div>
+        </div>
+        <!-- Fin canvas Right -->
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+
+    <footer class="text-center text-lg-start bg-light text-muted py-1">
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-2">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mb-2">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="imgs/icons8-info-30.png" />
+                            A propos de nous
+                        </h6>
+                        <p>
+                            Prodiet Nutrition s’est imposé comme le leader marocain dans la distribution des suppléments nutritionnels.
+                            Des protéines aux multi-vitamines  en passant par les produits de santé général ou les
+                            vêtements et accessoires de sport de la plus haute qualité, Prodiet nutrition est votre partenaire
+                            de prédilection.
+                            Notre objectif est de  vous aider à atteindre vos buts et objectifs
+                            physiques  et vous guider vers un mode de vie plus sain.
+                        </p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-3 mb-3">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="imgs/icons8-catalog-30.png" />
+                            Produits
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Whey</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Gainner</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Creatine</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Pre-Workout</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Acides aminees / BCAAs</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Autre</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-2 mb-3">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="imgs/icons8-lien-30.png" />
+                            Liens Utiles
+                        </h6>
+                        <p>
+                            <a href="#" class="text-reset">Termes et conditions de vente</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">Nos Magasins</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">Blog</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-reset">Devenir Partenaire</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-4 mx-3 mb-2">
+                        <h6 class="text-uppercase fw-bold mb-1">Contact</h6>
+                        <pre class="fs-6"> 
+<img src="imgs/icons8-accueil-24.png" /> 9 Rue Monastir, Rabat Hassan
+    Du Lundi au Vendredi:
+    9h00 - 18h30
+    Samedi:
+    9h00 - 18h00 </pre>
+                        <pre> <img src="imgs/icons8-courrier-24.png" /> NutritionPro@universe.com</pre>
+                        <pre> <img src="imgs/icons8-téléphone-25.png" /> +212 (0)6 93 44 56 05</pre>
+                        <pre> <img src="imgs/icons8-impression-25.png" /> +212 (0)5 37 70 55 91</pre>
+                    </div>
+                </div>
+                </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            <a href="#" class="me-4 text-reset">
+                    <img src="imgs/icons8-facebook-30.png" />
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <img src="imgs/icons8-whatsapp-30.png" />
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <img src="imgs/icons8-instagram-30.png" />
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <img src="imgs/icons8-twitter-30.png" />
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <img src="imgs/icons8-linkedin-30.png" />
+                </a>
+        </div>
+    </footer>
+    <script src="boostrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
